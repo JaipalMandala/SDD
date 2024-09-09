@@ -1,3 +1,9 @@
+
+IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'UserManagementDB')
+  BEGIN
+    CREATE DATABASE [DataBase]
+END
+
 USE [UserManagementDB]
 GO
 /****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 09-09-2024 10:12:09 ******/
