@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AuthService } from './auth/auth.service';
+import { ErrorInterceptor } from './interceptor/http-error.interceptor';
 
 
 @NgModule({
@@ -11,6 +12,6 @@ import { AuthService } from './auth/auth.service';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [AuthService],
+  providers: [AuthService,ErrorInterceptor],
 })
 export class CoreModule { }

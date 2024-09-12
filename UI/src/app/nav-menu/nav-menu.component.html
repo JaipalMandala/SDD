@@ -1,5 +1,24 @@
-<nav style="float:right;margin-right: 30px;margin-top: 10px;">
-  <div class="justify-content-end mt-2 float: right;">
-    <a *ngIf="isValidUser" (click)="logout()">Logout</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" width="100%" id="navbarNav">
+    <ul class="navbar-nav" style="height: 3rem;">
+      <li class="nav-item">
+        <a class="nav-link p-3" routerLink="/" translate>Home</a>
+      </li>
+      <li class="nav-item" *ngIf="hasRole('User')">
+        <a class="nav-link p-3" routerLink="/user" translate>User</a>
+      </li>
+      <li class="nav-item" *ngIf="hasRole('Admin')">
+        <a class="nav-link p-3" routerLink="/admin" translate>Admin</a>
+      </li>
+    </ul>
   </div>
+  <ul class="navbar-nav" style="height: 3rem;">
+    <li class="nav-item">
+      <a class="nav-link p-3" href="" (click)="logout()" translate>Logout</a>
+    </li>
+  </ul>
 </nav>

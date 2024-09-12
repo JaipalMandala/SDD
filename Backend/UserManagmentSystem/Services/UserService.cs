@@ -4,6 +4,8 @@ using UserManagmentSystem.Data;
 using UserManagmentSystem.Models;
 using Microsoft.EntityFrameworkCore;
 using UserManagmentSystem.Utilities;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 
 namespace UserManagmentSystem.Services
 {
@@ -17,24 +19,33 @@ namespace UserManagmentSystem.Services
             _context = context;
         }
 
-        public async Task<User> Authenticate(string username, string password)
+        public async Task<List<User>> GetAllUsersAsync()
         {
-           var user = await _context.Users.SingleOrDefaultAsync(x => x.Username == username);
+            var usersList = await _context.Users.OrderByDescending(date => date.UpdatedDate)
+                            .Include(x => x.UserRoles)
+                            .ThenInclude(x => x.Role)
+                            .AsNoTracking()
+                            .ToListAsync();
+            return usersList;
+        }
 
-            var users = await _context.Users
-    .Include(x => x.UserRoles)
-        .ThenInclude(x => x.Role)
-    .AsNoTracking()
-    .ToListAsync();
-
-            user = users.SingleOrDefault(u => u.Username == username);
-
-            if (user == null || !hashPassword.IsValidPassword(user.Password, password))
-                return null;
+        public async Task<User> GetUserByIdAsync(int Id)
+        {
+            var user = await _context.Users
+                                     .AsNoTracking()
+                                     .Include(x => x.UserRoles)
+                                     .ThenInclude(x => x.Role)
+                                     .SingleOrDefaultAsync(x => x.Id == Id);
 
             return user;
         }
 
+        public async Task<User> GetUserByNameAsync(string UserName)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == UserName);
+            return user;
+        }
+        
         public async Task<User> CreateUserAsync(AddUser user, string password)
         {
             var item = new User();
@@ -57,12 +68,10 @@ namespace UserManagmentSystem.Services
                     IsActive = true
 
                 };
-
                 await _context.Users.AddAsync(item);
                 await _context.SaveChangesAsync();
 
-
-                foreach (var roleId in user.RoleIds)
+                foreach (var roleId in user.RoleIds) // mapping roles and inserting in to database
                 {
                     var userRole = new UserRole { UserId = item.Id, RoleId = roleId };
                     _context.UserRoles.Add(userRole);
@@ -74,30 +83,46 @@ namespace UserManagmentSystem.Services
             return item;
         }
 
-        public async Task<User> UpdateUserAsync(AddUser user)
+        public async Task<User> UpdateUserAsync(AddUser updateUserObject)
         {
-            var item = new User
-            {
-                Username = user.Username,
-                Password = HashPassword(user.Password),
-                Email = user.Email,
-                FirstName = user.FirstName,
-                LastName = user.LastName,
-                CreatedDate = DateTime.UtcNow,
-                UpdatedDate = DateTime.UtcNow,
-                IsActive = true
-            };
+            var user =await _context.Users.SingleOrDefaultAsync(x => x.Username == updateUserObject.Username);
 
-            _context.Entry(item).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-
-            foreach (var roleId in user.RoleIds)
+            if (user.Id != updateUserObject.Id)
             {
-                var userRole = new UserRole { UserId = item.Id, RoleId = roleId };
-                _context.UserRoles.Add(userRole);
+                throw new InvalidOperationException("User already existed with same User Name");
             }
+            if (user == null)
+            {
+                throw new Exception($"User with ID {updateUserObject.Id} not found.");
+            }
+
+            UpdateUserProperties(user, updateUserObject);
+            await UpdateUserRolesAsync(user, updateUserObject.RoleIds);
             await _context.SaveChangesAsync();
-            return item;
+
+            return user;
+        }
+
+        private void UpdateUserProperties(User user, AddUser updateUserObject)
+        {
+            user.FirstName = updateUserObject.FirstName;
+            user.LastName = updateUserObject.LastName;
+            user.Email = updateUserObject.Email;
+            user.IsActive = updateUserObject.IsActive;
+            user.UpdatedDate = DateTime.UtcNow;
+            user.UpdatedBy = updateUserObject.UpdatedBy;
+        }
+
+        private async Task UpdateUserRolesAsync(User user, IEnumerable<int> newRoleIds)
+        {
+            var existingUserRoles = await _context.UserRoles
+                .Where(x => x.UserId == user.Id)
+                .ToListAsync();
+
+            _context.UserRoles.RemoveRange(existingUserRoles);
+
+            var newUserRoles = newRoleIds.Select(roleId => new UserRole { UserId = user.Id, RoleId = roleId });
+            await _context.UserRoles.AddRangeAsync(newUserRoles);
         }
 
         public async Task DeleteUserByIdAsync(int id)
@@ -108,27 +133,7 @@ namespace UserManagmentSystem.Services
                 user.IsActive = false;
                 await _context.SaveChangesAsync();
             }
-        }
+        }      
 
-        public async Task<User> GetUserByNameAsync(string UserName)
-        {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == UserName);
-            return user;
-        }
-
-
-        private string HashPassword(string password)
-        {
-            using (var sha256 = SHA256.Create())
-            {
-                var hashedPasswordBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return BitConverter.ToString(hashedPasswordBytes).Replace("-", "").ToLower();
-            }
-        }
-
-        private bool VerifyPasswordHash(string hashedPassword, string Password)
-        {
-            return HashPassword(Password) == hashedPassword;
-        }
     }
 }

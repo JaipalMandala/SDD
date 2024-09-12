@@ -5,6 +5,12 @@ import { Component } from '@angular/core';
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.scss']
 })
-export class AdminComponent {
 
+
+export class AdminComponent {
+userInfo: any;
+
+constructor(){
+  this.userInfo = JSON.parse(localStorage.getItem('user')!); 
+}
 }

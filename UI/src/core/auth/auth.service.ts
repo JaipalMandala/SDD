@@ -9,8 +9,8 @@ import { User } from 'src/app/models/user.model';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-    private userSubject: BehaviorSubject<User | null>;
-    public user: Observable<User | null>;
+    private userSubject: BehaviorSubject<any | null>;
+    public user: Observable<any | null>;
 
     constructor(
         private router: Router,
@@ -20,7 +20,7 @@ export class AuthService {
         this.user = this.userSubject.asObservable();
     }
 
-    public get userValue() {
+    public get loggedInUserDeatils() {
         if (!this.userSubject.value) {
             this.userSubject = new BehaviorSubject(JSON.parse(localStorage.getItem('user')!))
         }
@@ -28,7 +28,7 @@ export class AuthService {
     }
 
     login(username: string, password: string) {
-        return this.http.post<User>(`${environment.apiUrl}/Auth/login`, { username, password })
+        return this.http.post<any>(`${environment.apiUrl}/Auth/login`, { username, password })
             .pipe(map(user => {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('user', JSON.stringify(user));
@@ -45,7 +45,7 @@ export class AuthService {
     }
 
     hasRole(role: string): boolean {
-        const user = this.userValue;
+        const user = this.loggedInUserDeatils;
         if (user && user?.userRoles) {
             return user?.userRoles.includes(role);
         }

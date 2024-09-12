@@ -1,2 +1,8 @@
-    <app-nav-menu *ngIf="isValidUser"></app-nav-menu>
-    <router-outlet></router-outlet>
+<app-language-selector></app-language-selector>
+
+<router-outlet></router-outlet>
+
+<mat-toolbar *ngIf="this.userInfo" class="mt-4" style="height: 45px;font-size: 13px;">
+    &copy; 2024
+            <span translate>Sharjah Digital Department. All rights reserved.</span>
+</mat-toolbar>

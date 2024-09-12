@@ -1,34 +1,75 @@
-<h2 mat-dialog-title>{{data.id ? 'Edit' : 'Add'}} User</h2>
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<h2 mat-dialog-title translate>{{data.id ? 'Edit' : 'Add'}} User</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="!loading">
   <mat-dialog-content style="align-items: center;">
-    <mat-form-field>
-      <input matInput placeholder="First Name" formControlName="firstName">
-      <mat-error *ngIf="form.get('firstName')?.hasError('required')">First Name is required</mat-error>
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Last Name" formControlName="lastName">
-        <mat-error *ngIf="form.get('lastName')?.hasError('required')">Name is required</mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="User Name" formControlName="username">
-        <mat-error *ngIf="form.get('username')?.hasError('required')">User Name is required</mat-error>
-      </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Email" formControlName="email">
-      <mat-error *ngIf="form.get('email')?.hasError('required')">Email is required</mat-error>
-      <mat-error *ngIf="form.get('email')?.hasError('email')">Invalid email format</mat-error>
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Role" formControlName="role">
-        <mat-select>
-          <mat-option value="1">User</mat-option>
-          <mat-option value="2">Admin</mat-option>
-        </mat-select>
-      <mat-error *ngIf="form.get('role')?.hasError('required')">Role is required</mat-error>
-    </mat-form-field>
+    <div class="container">
+      <!-- Row 1 -->
+      <div class="row mb-4">
+        <div class="col-md-6 box">
+          <mat-form-field>
+            <input matInput placeholder="{{ 'First Name' | translate }}" formControlName="firstName">
+            <mat-error *ngIf="form.get('firstName')?.hasError('required')" translate>First Name is required</mat-error>
+            <mat-error *ngIf="form.get('firstName')?.errors?.['maxlength']" translate>First Name cannot exceed 30 characters</mat-error>
+
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 box"><mat-form-field>
+            <input matInput placeholder="{{ 'Last Name' | translate }}" formControlName="lastName">
+            <mat-error *ngIf="form.get('lastName')?.hasError('required')" translate>Last Name is required</mat-error>
+            <mat-error *ngIf="form.get('lastName')?.errors?.['maxlength']" translate>Last Name cannot exceed 30 characters</mat-error>
+          </mat-form-field></div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="row mb-4">
+        <div class="col-md-6 box"><mat-form-field>
+            <input matInput placeholder="{{ 'User Name' | translate }}" formControlName="username">
+            <mat-error *ngIf="form.get('username')?.hasError('required')" translate>User Name is required</mat-error>
+            <mat-error *ngIf="form.get('username')?.errors?.['maxlength']" translate>User Name cannot exceed 40 characters</mat-error>
+          </mat-form-field></div>
+        <div class="col-md-6 box">
+          <mat-form-field>
+            <input matInput placeholder="{{ 'Email' | translate }}" formControlName="email">
+            <mat-error *ngIf="form.get('email')?.hasError('required')" translate>Email is required</mat-error>
+            <mat-error *ngIf="form.get('email')?.hasError('email')" translate>Invalid email format</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <!-- Row 3 -->
+      <div class="row">
+        <div class="col-md-6 box"><mat-form-field>
+            <input matInput placeholder="{{ 'Password' | translate }}" formControlName="password" type="password" [disabled]="true">
+            <mat-error *ngIf="form.get('password')?.hasError('required')" translate>Password is required</mat-error>
+            <mat-error *ngIf="form.get('password')?.errors?.['minlength']" translate>Password must be at least 8 characters</mat-error>
+            <mat-error *ngIf="form.get('password')?.errors?.['maxlength']" translate>Password cannot exceed 15 characters</mat-error>
+          </mat-form-field></div>
+        <div class="col-md-6 box">
+          <mat-form-field>
+            <mat-select formControlName="roleIds" multiple  placeholder="{{ 'Role(s)' | translate }}" name="role">
+              <mat-option *ngFor="let role of roles" [value]="role.Id">{{role.RoleName}}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="form.get('roleIds')?.hasError('required')" translate>Role is required</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="row">
+        <div class="col-md-6 box">
+            <mat-checkbox name="isActive" #checkbox formControlName="isActive">
+              <span translate>Is Active</span>
+            </mat-checkbox>
+          </div>
+        <div class="col-md-6 box">
+        </div>
+      </div>      
+    </div>
   </mat-dialog-content>
-  <mat-dialog-actions  class="justify-content-end mt-2">
-    <button mat-button type="button" (click)="onCancel()">Cancel</button>
-    <button mat-button color="primary" type="submit" [disabled]="!form.valid">Save</button>
+  <mat-dialog-actions class="justify-content-end mb-4 mr-2">
+    <button mat-button type="button" (click)="onCancel()">
+      <span translate>Cancel</span> 
+    </button>
+    <button mat-raised-button color="primary" color="primary" type="submit" [disabled]="!form.valid">
+      <span translate>Save</span></button>
   </mat-dialog-actions>
+
 </form>

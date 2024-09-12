@@ -7,18 +7,17 @@ import { AuthService } from 'src/core/auth/auth.service';
   styleUrls: ['./nav-menu.component.scss']
 })
 export class NavMenuComponent implements OnInit {
+
   userInfo: any;
-  isValidUser: boolean = false;
 
   constructor(public authService: AuthService) { }
 
-
   ngOnInit() {
     this.userInfo = JSON.parse(localStorage.getItem('user')!);  
-    if(this.userInfo)
-    {
-      this.isValidUser = true;
-    }
+   }
+
+   hasRole(role: any){
+     return this.userInfo.user.userRoles.map((r: any)=>r.role.roleName).includes(role);
    }
 
   logout() {

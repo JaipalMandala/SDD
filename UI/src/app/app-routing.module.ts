@@ -8,8 +8,8 @@ import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent,canActivate:[AuthGuard] },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: '', component: DashboardComponent, pathMatch : 'full', canActivate:[AuthGuard] },
+  { path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard]  },
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
   { path: 'user', component: UserComponent, canActivate: [AuthGuard] },

@@ -5,7 +5,8 @@ namespace UserManagmentSystem.Services
 {
     public interface IUserService
     {
-        Task<User> Authenticate(string username, string password);
+        Task<List<User>> GetAllUsersAsync();
+        Task<User> GetUserByIdAsync(int Id);
         Task<User> CreateUserAsync(AddUser user, string password);
         Task<User> UpdateUserAsync(AddUser user);
         Task DeleteUserByIdAsync(int id);

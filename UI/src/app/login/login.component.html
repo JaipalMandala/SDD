@@ -1,29 +1,29 @@
 <div class="container col-md-6 offset-md-3 mt-5">
-    <div *ngIf="error" class="alert alert-danger">{{error?.error.title}}</div>
+    <div *ngIf="error" class="alert alert-danger">{{error?.error?.message}}</div>
     <div class="card">
-        <h4 class="card-header">Login</h4>
+        <h4 class="card-header" translate>Login</h4>
         <div class="card-body">
             <form [formGroup]="logInForm" (ngSubmit)="onSubmit()">
                 <div class="mb-3">
-                    <label class="form-label">Username</label>
+                    <label class="form-label" translate>User Name</label>
                     <input type="text" formControlName="username" class="form-control" 
                     [ngClass]="{ 'is-invalid': submitted && f['username'].errors }" />
                     <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
-                        <div *ngIf="f['username'].errors['required']">Username is required</div>
+                        <div *ngIf="f['username'].errors['required']" translate>User Name is required</div>
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Password</label>
+                    <label class="form-label" translate>Password</label>
                     <input type="password" formControlName="password" class="form-control" 
                     [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
                     <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
-                        <div *ngIf="f['password'].errors['required']">Password is required</div>
+                        <div *ngIf="f['password'].errors['required']" translate>Password is required</div>
                     </div>
                 </div>
                 <div>
                     <button [disabled]="loading" class="btn btn-primary">
                         <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
-                        Login
+                       <span translate>Login</span> 
                     </button>
                 </div>
             </form>

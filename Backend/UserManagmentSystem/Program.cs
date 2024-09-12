@@ -5,14 +5,13 @@ using System.Text;
 using System.Text.Json.Serialization;
 using UserManagmentSystem.Data;
 using UserManagmentSystem.Services;
+using UserManagmentSystem.Utilities;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 
-// Add services to the container.
+//Jwt token configuration rlated changes starts here
 
-
-//Jwt configuration starts here
 var jwtIssuer = builder.Configuration.GetSection("Jwt:Issuer").Get<string>();
 var jwtKey = builder.Configuration.GetSection("Jwt:Secret").Get<string>();
 
@@ -34,6 +33,7 @@ builder.Services.AddAuthentication(options =>
          IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
      };
  });
+
 //Jwt configuration ends here
 
 builder.Services.AddControllers().AddJsonOptions(options =>
@@ -43,13 +43,17 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 });
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer
 (builder.Configuration.GetConnectionString("UserDBConnection")));
 
+builder.Services.AddDbContext<ErrorLogDBContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("UserDBConnection")));
+
+builder.Services.AddExceptionHandler<ExceptionHandler>();
+builder.Services.AddProblemDetails();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 
@@ -63,6 +67,18 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+else
+{
+}
+
+app.UseHttpsRedirection();
+
+// Adding exception handler middleware for global exceptions
+app.UseExceptionHandler();
 app.UseCors(x => x
             .AllowAnyOrigin()
             .AllowAnyMethod()

@@ -21,7 +21,7 @@ export class LoginComponent {
     private route: ActivatedRoute,
     private router: Router,
     private authService: AuthService) {
-    if (this.authService.userValue) {
+    if (this.authService.loggedInUserDeatils) {
       this.router.navigate(['/']);
     }
   }
@@ -54,11 +54,6 @@ export class LoginComponent {
         next: () => {
           this.loading = true;
           this.router.navigateByUrl('/dashboard');
-        },
-        error: error => {
-          this.error = error;
-          this.loading = false;
-          return false;
         }
       });
   }
