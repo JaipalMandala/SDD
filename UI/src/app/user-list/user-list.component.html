@@ -1,34 +1,29 @@
-<div style="width: 98%;">
+<!-- <div *ngIf="isLoading" class="spinner-border spinner-border-sm"></div> -->
 
+<div class="container">
+  <div *ngIf="!isLoading" class="spinner-overlay">
+    <div class="spinner"></div>
+  </div>
+</div>
+
+<div style="width: 98%;">
   <div>
     <div class="row mx-3 mb-3">
-
-      <div class="col-2" style="margin-bottom: 10px; margin-top: 20px;">
+      <div class="col" style="margin-bottom: 10px; margin-top: 20px;">
         <div class="row">
-          <div class="col-6 mt-2 font-weight-bold fs-6">
+          <div class="col-auto font-bold mt-2">
             <span matTooltip="Search will work on First Name, Last Name, User Name, Email,
-            IsActive" translate>Search User</span> :
-            
+            IsActive | translate" translate>Search User</span> :
+
           </div>
-          <div class="col-6">
-            <input type="text" class="form-control" (keyup)="searchUser($event)" placeholder="{{ 'Search' | translate }}" #input>
+          <div class="col-auto">
+            <input type="text" class="form-control" (keyup)="searchUser($event)"
+              placeholder="{{ 'Search' | translate }}" #input>
           </div>
         </div>
       </div>
 
-      <div class="col-1">
-      </div>
-      <div class="col-1">
-      </div>
-      <div class="col-1">
-      </div>
-      <div class="col-1">
-      </div>
-      <div class="col-2" style="width:18% !important;">
-      </div>
-      <div class="col-2 style=width:18% !important;">
-      </div>
-      <div class="col-3" style="width: 15%;">
+      <div class="col flex justify-end" *ngIf="hasRole('Admin')">
         <button mat-raised-button color="primary" (click)="openDialog()" dir="ltr"
           style="margin-bottom: 10px; margin-top: 20px;" class="mx-3">
           <label translate>Add User</label></button>
@@ -78,7 +73,14 @@
       <th mat-header-cell *matHeaderCellDef mat-sort-header translate>
         <span translate>Status</span>
       </th>
-      <td mat-cell *matCellDef="let element"> {{element.isActive}} </td>
+      <td mat-cell *matCellDef="let element">
+        <ng-container *ngIf="element.isActive; else inactive">
+          <img src="assets/icons/active-icon.svg" [matTooltip]="'Active' | translate" alt="Active" />
+        </ng-container>
+        <ng-template #inactive>
+          <img src="assets/icons/inactive-icon.svg" [matTooltip]="'Inactive' | translate" alt="Inactive" />
+        </ng-template>
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="role">
@@ -93,10 +95,18 @@
         <span translate> Actions</span>
       </th>
       <td mat-cell *matCellDef="let element">
-        <button mat-icon-button color="primary" (click)="openDialog(element)">
+        <button *ngIf="hasRole('Admin')" mat-icon-button color="primary" (click)="openDialog(element,'edit')"
+          [matTooltip]="'Edit' | translate">
           <mat-icon>edit</mat-icon>
         </button>
-        <button mat-icon-button color="warn" (click)="deleteUser(element.id)">
+
+        <button mat-icon-button aria-label="Show view" (click)="openDialog(element,'view')"
+          [matTooltip]="'View' | translate">
+          <mat-icon class="view-icon">visibility</mat-icon>
+        </button>
+
+        <button *ngIf="hasRole('Admin')" mat-icon-button color="warn" (click)="deleteUser(element.id)"
+          [matTooltip]="'Delete' | translate">
           <mat-icon>delete</mat-icon>
         </button>
       </td>

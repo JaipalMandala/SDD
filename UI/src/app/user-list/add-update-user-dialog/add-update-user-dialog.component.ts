@@ -24,6 +24,7 @@ export class AddUpdateUserDialogComponent {
   payload: any;
   userDetails: any;
   currentUser: any;
+  title: string = 'Add User';
 
   constructor(
     public dialogRef: MatDialogRef<AddUpdateUserDialogComponent>,
@@ -35,19 +36,20 @@ export class AddUpdateUserDialogComponent {
   ) {
     this.currentUser = this.authService.loggedInUserDeatils.user;
     this.userFormInitilization();
-    if (this.data.id) {
+    if (this.data?.item.id) {
       // edit mode
       this.isEdit = true;
+      this.title = this.data?.isFormdisable ? "View User" : "Edit User";
     }
   }
 
   ngOnInit() {
-    if (this.data.id) {
+    if (this.data?.item.id) {
       // edit mode
       this.isEdit = true;
       this.loading = true;
 
-      this.userService.getUserById(this.data.id)
+      this.userService.getUserById(this.data?.item.id)
         .pipe(first())
         .subscribe(item => {
           this.form.controls['username'].disable();
@@ -68,7 +70,7 @@ export class AddUpdateUserDialogComponent {
 
   userFormInitilization() {
     this.form = this.fb.group({
-      id: [this.data.Id],
+      id: [this.data?.item.Id],
       firstName: ['', [Validators.required, Validators.maxLength(30)]],
       lastName: ['', Validators.maxLength(30)],
       username: [{ value: '', disabled: this.isEdit }, [Validators.required, Validators.maxLength(40)]],
@@ -77,20 +79,21 @@ export class AddUpdateUserDialogComponent {
       roleIds: ['', Validators.required],
       isActive: [true, Validators.required]
     });
+    if (this.data?.isFormdisable) this.form.disable();
   }
+
   onSubmit(): void {
     if (this.form.valid) {
-
       this.payload = this.form.value;
       //  let roleID = [this.form.controls['roleIds'].value]
       // this.form.controls['roleIds'].setValue(roleID);
-      if (!this.data.id) {
+      if (!this.data?.item.id) {
         this.payload.id = 0;
         this.payload.createdBy = this.currentUser?.username;
         this.payload.updatedBy = this.currentUser?.username;
         this.userService.addUser(this.payload).subscribe((response) => {
           if (response.success) {
-            this.snackBar.open(response?.message, 'Close', { duration: 2000, panelClass: 'my-custom-snackbar' });
+            this.snackBar.open(response?.message, 'Close', { duration: 2000, panelClass: 'custom-snackbar' });
             this.dialogRef.close(true);
           }
         });
@@ -99,10 +102,12 @@ export class AddUpdateUserDialogComponent {
         this.payload.username = this.userDetails?.username;
         this.payload.password = "************";
         this.payload.updatedBy = this.currentUser?.username;
-        this.userService.updateUser(this.data.id, this.form.value).subscribe((response) => {
-          if (response.success) {
-            this.dialogRef.close(true);
-            this.snackBar.open(response?.message, 'Close', { duration: 2000, panelClass: 'my-custom-snackbar' });
+        this.userService.updateUser(this.data?.item.id, this.form.value).pipe().subscribe({
+          next: (response) => {
+            if (response.success) {
+              this.dialogRef.close(true);
+              this.snackBar.open(response?.message, 'Close', { duration: 2000, panelClass: 'custom-snackbar' });
+            }
           }
         });
       }

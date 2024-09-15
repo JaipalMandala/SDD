@@ -1,5 +1,5 @@
 <select (change)="changeLanguage($event)" class="language-selector float:right;">
-    <option *ngFor="let lang of languages" [value]="lang.code" [selected]="lang.code === currentLang">
-      {{ lang.name }}
-    </option>
-  </select>
+  <option *ngFor="let lang of languages" [value]="lang.code" [selected]="lang.code === currentLang">
+    {{ lang.name }}
+  </option>
+</select>

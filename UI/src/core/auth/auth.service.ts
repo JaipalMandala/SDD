@@ -21,9 +21,9 @@ export class AuthService {
     }
 
     public get loggedInUserDeatils() {
-        if (!this.userSubject.value) {
-            this.userSubject = new BehaviorSubject(JSON.parse(localStorage.getItem('user')!))
-        }
+        // if (!this.userSubject.value) {
+        //     this.userSubject = new BehaviorSubject(JSON.parse(localStorage.getItem('user')!))
+        // }
         return this.userSubject.value;
     }
 

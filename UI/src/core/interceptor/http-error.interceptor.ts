@@ -3,13 +3,15 @@ import { Injectable } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { TranslateService } from "@ngx-translate/core";
 import { catchError, Observable, throwError } from "rxjs";
+import { AuthService } from "../auth/auth.service";
 
 @Injectable({
     providedIn: 'root'
 })
 export class ErrorInterceptor implements HttpInterceptor {
     constructor(private snackBar: MatSnackBar,
-        private translateService: TranslateService
+        private translateService: TranslateService,
+        private authService: AuthService
     ) {
 
     }
@@ -18,9 +20,13 @@ export class ErrorInterceptor implements HttpInterceptor {
         return next.handle(req)
             .pipe(
                 catchError((error: any) => {
+                    if ([401, 403].includes(error.status)) {
+                        // auto logout if 401 or 403 response returned from api
+                        this.authService.logout();
+                    }
                     console.log(error.error.message);
                     const errorMessage: any = this.setError(error);
-                    this.snackBar.open(errorMessage?.message, 'Close', {
+                    this.snackBar.open(errorMessage?.message ? errorMessage?.message : errorMessage, 'Close', {
                         duration: 5000, verticalPosition: 'top',
                     });
                      return throwError(errorMessage);

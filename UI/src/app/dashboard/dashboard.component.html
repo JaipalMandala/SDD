@@ -1,3 +1,27 @@
-
-<app-nav-menu *ngIf="userInfo"></app-nav-menu>
-<app-user-list></app-user-list>
+<div class="mt-4 mx-3">
+    <div class="card-body">
+        <h1 translate>Welcome to <span>{{userInfo?.user?.username}}</span>....!</h1>
+        <p translate>Your role is: <strong>{{userInfo.userRoles}}</strong>.</p>
+        <div translate *ngIf="isAdmin(); else user">
+            <p translate>You are eligible to access the User and Admin modules.</p>
+            <p translate class="mb-1">You can perform the following actions with an admin role:</p>
+            <ul>
+                <li translate>
+                    Create new user accounts
+                </li>
+                <li translate>
+                    Edit existing user profiles
+                </li>
+                <li translate>
+                    Disable or delete user accounts
+                </li>
+                <li translate>
+                    Assign or modify user roles
+                </li>
+            </ul>
+        </div>
+        <ng-template #user>
+            <p translate>You are eligible for only view the users.</p>
+        </ng-template>
+    </div>
+</div>

@@ -42,7 +42,19 @@
     "Invalid email format":"تنسيق البريد الإلكتروني غير صالح",
     "Password must be at least 8 characters":"يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.",
     "Password cannot exceed 15 characters":"",
-    "Edit User":"تحرير المستخدم"
+    "Edit User":"تحرير المستخدم",
+    "Edit":"تحرير",
+    "PAGINATOR.ITEM":"العناصر في كل صفحة",
+    "PAGINATOR.NEXT_PAGE":"الصفحة التالية",
+    "PAGINATOR.PREVIOUS_PAGE":"الصفحة السابقة",
+    "PAGINATOR.FIRST_PAGE":"الصفحة الأولى",
+    "PAGINATOR.LAST_PAGE":"الصفحة الأخيرة",
+    "OF":"من",
+    "Active":"نشط",
+    "Inactive":"غير نشط",
+    "View":"عرض",
+    "View User":"عرض المستخدم",
+    "About":"عن"
 
 
  }

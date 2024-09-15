@@ -23,8 +23,11 @@ export class AppComponent {
         this.renderer.removeAttribute(document.documentElement, 'dir');
       }
     });
+  }
+
+  ngOnInit() {
     this.userInfo = this.authService.loggedInUserDeatils;
-    if(this.userInfo) this.isValidUser = true;
+    if (this.userInfo) this.isValidUser = true;
     else this.userInfo = false
   }
   changeLangage(lang?: any) {

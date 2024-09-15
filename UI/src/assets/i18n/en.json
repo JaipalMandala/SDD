@@ -41,6 +41,18 @@
     "Invalid email format":"Invalid email format",
     "Password must be at least 8 characters":"Password must be at least 8 characters",
     "Password cannot exceed 15 characters":"Password cannot exceed 15 characters",
-    "Edit User":"Edit User"
+    "Edit User":"Edit User",
+    "Edit":"Edit",
+    "PAGINATOR.ITEM":"Items per page",
+    "PAGINATOR.NEXT_PAGE":"Next Page",
+    "PAGINATOR.PREVIOUS_PAGE":"Previous Page",
+    "PAGINATOR.FIRST_PAGE":"First Page",
+    "PAGINATOR.LAST_PAGE":"Last Page",
+    "OF":"of",
+    "Active":"Active",
+    "Inactive":"Inactive",
+    "View":"View",
+    "View User":"View User",
+    "About":"About"
     
  }

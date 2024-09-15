@@ -6,11 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin.component.scss']
 })
 
-
 export class AdminComponent {
-userInfo: any;
 
-constructor(){
-  this.userInfo = JSON.parse(localStorage.getItem('user')!); 
-}
+  userInfo: any;
+
+  constructor() {
+    this.userInfo = JSON.parse(localStorage.getItem('user')!);
+  }
+  
 }

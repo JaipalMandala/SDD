@@ -4,4 +4,18 @@
     justify-content: center;
   }
 
-  
+  .header{
+    // &:lang(ar){
+    //   text-align: right !important;
+    // }
+
+    // &:lang(en){
+    //   text-align: left !important;
+    // }
+    &:dir(rtl){
+      text-align: left !important;
+    }
+    &:dir(ltr){
+      text-align: right !important;
+    }
+  }

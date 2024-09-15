@@ -1,10 +1,12 @@
 <div>
-<h1 mat-dialog-title>{{data.title}}</h1>
-<div mat-dialog-content>
-  <p>{{ data.message }}</p>
-</div>
-<div mat-dialog-actions>
-  <button mat-button class="mx-3" (click)="onCancel()">{{data.cancelText}}</button>
-  <button mat-raised-button color="primary" (click)="onConfirm()">{{data.okText}}</button>
-</div>
+  <h1 mat-dialog-title translate>{{data.title}}</h1>
+  <div mat-dialog-content>
+    <p translate>{{ data.message }}</p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button class="mx-3" (click)="onCancel()"><span translate>{{data.cancelText}}</span></button>
+    <button mat-raised-button color="primary" (click)="onConfirm()">
+      <span translate> {{data.okText}}</span>
+    </button>
+  </div>
 </div>

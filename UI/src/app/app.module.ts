@@ -33,6 +33,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ErrorInterceptor } from 'src/core/interceptor/http-error.interceptor';
+import { AboutComponent } from './about/about.component';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -50,6 +52,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AddUpdateUserDialogComponent,
     LanguageSelectorComponent,
     ConfirmationDialogComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

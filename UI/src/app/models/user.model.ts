@@ -10,13 +10,6 @@ export class User {
   createdDate?: string;
   updatedBy?: string;
   updatedDate?: string;
-  userRoles:any;
+  userRoles: any;
 
-}
-
-export interface UserTest {
-  id: number;
-  name: string;
-  email: string;
-  role: string;
 }

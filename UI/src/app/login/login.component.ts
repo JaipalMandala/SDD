@@ -16,14 +16,15 @@ export class LoginComponent {
   submitted: boolean = false;
   error?: any;
 
-
   constructor(private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
     private authService: AuthService) {
+
     if (this.authService.loggedInUserDeatils) {
       this.router.navigate(['/']);
     }
+
   }
 
   ngOnInit() {
@@ -36,8 +37,8 @@ export class LoginComponent {
   get f() { return this.logInForm.controls; }
 
   onSubmit() {
-    this.submitted = true;
 
+    this.submitted = true;
     this.error = '';
 
     if (this.logInForm.invalid) {
@@ -45,7 +46,6 @@ export class LoginComponent {
     }
 
     this.loading = false;
-
     const { username, password } = this.logInForm.value;
 
     this.authService.login(username, password)
@@ -53,7 +53,8 @@ export class LoginComponent {
       .subscribe({
         next: () => {
           this.loading = true;
-          this.router.navigateByUrl('/dashboard');
+          const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+          this.router.navigate([returnUrl]);
         }
       });
   }

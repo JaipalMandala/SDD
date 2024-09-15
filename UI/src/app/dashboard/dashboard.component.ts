@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,14 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
-  
+
   userInfo: any;
 
- constructor(){
-    this.userInfo = JSON.parse(localStorage.getItem('user')!);  
- }
+  constructor(private router: Router) {
+    this.userInfo = JSON.parse(localStorage.getItem('user')!);
+  }
 
- ngOnInit(){
-  console.log(this.userInfo);
- }
+  isAdmin() {
+    return  this.userInfo?.userRoles.map((r: any) => r).includes('Admin');
+  }
+  
 }
