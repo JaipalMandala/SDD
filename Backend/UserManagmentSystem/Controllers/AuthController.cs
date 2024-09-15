@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.IdentityModel.Tokens;
+using System.Data;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -26,44 +28,74 @@ namespace UserManagmentSystem.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LogIn request)
         {
-            var user = await _authService.Authenticate(request.Username, request.Password);
-            if (user == null) return BadRequest(new
+            if(request == null || string.IsNullOrEmpty(request.Username) || string.IsNullOrEmpty(request.Password))
+            {
+                return BadRequest(new
+                {
+                    message = "Invalid Credentails",
+                    success = false,
+                });
+            }
+            var user = await _authService.AuthenticateAsync(request.Username, request.Password);
+            if (user == null) return Unauthorized(new
             {
                 message = "Invalid User name or Password",
                 success = false,
             });
 
+           // var listRoles = new List<string>();
+           // var roles = user.UserRoles.Select(s => new { s.Role.RoleName }).ToList();
+            //  roleNames = string.Join(", ", roles.Select(s => s.RoleName));
+             //roleNames.AddRange(roles);
+           //    var enumerableList = roles.AsEnumerable();
+
+            var userRoles = user.UserRoles.Select(ur => ur.Role.RoleName).ToList();
+
+            //   roleName.Add(roles);
+            //   foreach (var item in roles)
+            //   {
+            //      listRoles.Add(item.ToString());
+            //   }
             // generating JWT token
-            var token = GenerateToken(user);
+            var token = GenerateToken(user, userRoles);
 
             return Ok(new
             {
                 Token = token,
                 User = user,
+                UserRoles = userRoles,
                 success = true,
             });
         }
 
         // To generate token
-        private string GenerateToken(User user)
+        private string GenerateToken(User user, List<string> roles)
         {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Secret"]));
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-            var claims = new[]
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var securityKey = Encoding.UTF8.GetBytes("ThisIsASecretKeyForJwtTokenGeneration");
+          //  var claims = roles.Select(role => new Claim(ClaimTypes.Role, role)).ToList();
+
+            // Create claims based on user information
+            var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Name, user.Username),
+            new Claim(ClaimTypes.Email, user.Email),
+        };
+
+            // Add roles as claims
+            claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
+
+            var tokenDescriptor = new SecurityTokenDescriptor
             {
-                new Claim(ClaimTypes.NameIdentifier,user.Username),
-              //  new Claim(ClaimTypes.Role,user.UserRoles),
-                new Claim(ClaimTypes.Email, user.Email),
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.UtcNow.AddHours(1),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(securityKey), SecurityAlgorithms.HmacSha256Signature),
+                Issuer = _configuration["Jwt:Issuer"],
+                Audience = _configuration["Jwt:Audience"] // Ensure this matches the configuration
             };
-            var token = new JwtSecurityToken(_configuration["Jwt:Issuer"],
-                _configuration["Jwt:Audience"],
-                claims,
-                expires: DateTime.Now.AddMinutes(15),
-                signingCredentials: credentials);
 
-            return new JwtSecurityTokenHandler().WriteToken(token);
-
-
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
         }
     }
 

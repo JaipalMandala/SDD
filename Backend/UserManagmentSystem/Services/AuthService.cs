@@ -18,9 +18,9 @@ namespace UserManagmentSystem.Services
             _context = context;
         }
 
-        public async Task<User> Authenticate(string username, string password)
+        public async Task<User> AuthenticateAsync(string username, string password)
         {
-            var user = await _context.Users.SingleOrDefaultAsync(x => x.Username == username);
+            var user = new User();
             var users = await _context.Users.Include(x => x.UserRoles).ThenInclude(x => x.Role).AsNoTracking().ToListAsync();
             user = users.SingleOrDefault(u => u.Username == username);
             

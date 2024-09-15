@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\UserManagmentSystem.csproj": {}
+    "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\UserManagmentSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\UserManagmentSystem.csproj": {
+    "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\UserManagmentSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\UserManagmentSystem.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\UserManagmentSystem.csproj",
         "projectName": "UserManagmentSystem",
-        "projectPath": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\UserManagmentSystem.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\UserManagmentSystem.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,7 +50,19 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Asp.Versioning.Mvc": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.8, )"
             },

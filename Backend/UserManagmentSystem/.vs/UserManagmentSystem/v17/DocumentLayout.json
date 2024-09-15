@@ -1,70 +1,76 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\",
+  "WorkspaceRootPath": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\usermanagmentsystem\\models\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:models\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\usermanagmentsystem\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagmentsystem\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\usermanagmentsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagmentsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\usermanagmentsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\usermanagmentsystem\\utilities\\exceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:utilities\\exceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\usermanagmentsystem\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagmentsystem\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\usermanagmentsystem\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\usermanagmentsystem\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\usermanagmentsystem\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagmentsystem\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\usermanagmentsystem\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagmentsystem\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\usermanagmentsystem\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagmentsystem\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10EE7440-DE27-4FCD-8E84-B7B75C9D311A}|..\\UserManagementSystem.IntegrationTests\\UserManagementSystem.IntegrationTests.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagementsystem.integrationtests\\usercontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10EE7440-DE27-4FCD-8E84-B7B75C9D311A}|..\\UserManagementSystem.IntegrationTests\\UserManagementSystem.IntegrationTests.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagementsystem.integrationtests\\authcontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagmentsystem\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\usermanagmentsystem\\models\\exceptionslog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagmentsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagmentsystem\\utilities\\exceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:utilities\\exceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagmentsystem\\models\\exceptionslog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:models\\exceptionslog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\usermanagmentsystem\\data\\errorlogdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagmentsystem\\models\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:models\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagmentsystem\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagmentsystem\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagmentsystem\\data\\errorlogdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:data\\errorlogdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\usermanagmentsystem\\models\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagmentsystem\\models\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:models\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\usermanagmentsystem\\utilities\\generatehashpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\jaipal\\repos\\sdd\\sdd\\backend\\usermanagmentsystem\\utilities\\generatehashpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:utilities\\generatehashpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|c:\\users\\admin\\source\\repos\\usermanagmentsystem\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D546A80-1E14-48F7-A525-F125459FF0FF}|UserManagmentSystem.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,17 +80,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Controllers\\UserController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAmAAAA",
+              "ViewState": "AQIAACUAAAAAAAAAAADwvzIAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-08T16:24:23.988Z",
               "IsPinned": true,
@@ -92,106 +98,45 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-11T16:13:46.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Services\\IUserService.cs",
-              "RelativeDocumentMoniker": "Services\\IUserService.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Services\\IUserService.cs",
-              "RelativeToolTip": "Services\\IUserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBAAAAAAAAAA",
+              "DocumentIndex": 6,
+              "Title": "UserControllerTest.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagementSystem.IntegrationTests\\UserControllerTest.cs",
+              "RelativeDocumentMoniker": "..\\UserManagementSystem.IntegrationTests\\UserControllerTest.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagementSystem.IntegrationTests\\UserControllerTest.cs",
+              "RelativeToolTip": "..\\UserManagementSystem.IntegrationTests\\UserControllerTest.cs",
+              "ViewState": "AQIAAJcAAAAAAAAAAAAiwLAAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T18:42:56.133Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAQwAoAAABXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T16:54:30.086Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAwwCUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T16:49:22.352Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuditLog.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Models\\AuditLog.cs",
-              "RelativeDocumentMoniker": "Models\\AuditLog.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Models\\AuditLog.cs",
-              "RelativeToolTip": "Models\\AuditLog.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAkwBUAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T16:48:58.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwCIAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T16:22:47.314Z",
+              "WhenOpened": "2024-09-14T12:29:40.081Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Services\\UserService.cs",
-              "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAqwIcAAAAJAAAA",
+              "Title": "AuthControllerTest.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagementSystem.IntegrationTests\\AuthControllerTest.cs",
+              "RelativeDocumentMoniker": "..\\UserManagementSystem.IntegrationTests\\AuthControllerTest.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagementSystem.IntegrationTests\\AuthControllerTest.cs",
+              "RelativeToolTip": "..\\UserManagementSystem.IntegrationTests\\AuthControllerTest.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAUwCsAAABjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T16:24:24.002Z",
+              "WhenOpened": "2024-09-13T12:46:41.563Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "Role.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Models\\Role.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Models\\Role.cs",
               "RelativeDocumentMoniker": "Models\\Role.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Models\\Role.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Models\\Role.cs",
               "RelativeToolTip": "Models\\Role.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -200,13 +145,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Controllers\\AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAEAAAAAAAAAA",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAiwD0AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-08T16:21:50.448Z",
               "EditorCaption": ""
@@ -214,75 +159,171 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ExceptionHandler.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Utilities\\ExceptionHandler.cs",
-              "RelativeDocumentMoniker": "Utilities\\ExceptionHandler.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Utilities\\ExceptionHandler.cs",
-              "RelativeToolTip": "Utilities\\ExceptionHandler.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwCkAAAAYAAAA",
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Services\\AuthService.cs",
+              "RelativeToolTip": "Services\\AuthService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAuwBcAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T11:05:09.63Z",
+              "WhenOpened": "2024-09-08T16:24:11.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAA9wBcAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T16:49:22.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-11T16:13:46.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAQwC4AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T16:22:47.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "Services\\IUserService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Services\\IUserService.cs",
+              "RelativeToolTip": "Services\\IUserService.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAnwAoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T18:42:56.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Services\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAUwBkAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T16:24:24.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AuditLog.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Models\\AuditLog.cs",
+              "RelativeDocumentMoniker": "Models\\AuditLog.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Models\\AuditLog.cs",
+              "RelativeToolTip": "Models\\AuditLog.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAA5wBUAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T16:48:58.943Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "ExceptionsLog.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Models\\ExceptionsLog.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Models\\ExceptionsLog.cs",
               "RelativeDocumentMoniker": "Models\\ExceptionsLog.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Models\\ExceptionsLog.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Models\\ExceptionsLog.cs",
               "RelativeToolTip": "Models\\ExceptionsLog.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T11:06:21.625Z"
+              "WhenOpened": "2024-09-11T11:06:21.625Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ErrorLogDBContext.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Data\\ErrorLogDBContext.cs",
-              "RelativeDocumentMoniker": "Data\\ErrorLogDBContext.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Data\\ErrorLogDBContext.cs",
-              "RelativeToolTip": "Data\\ErrorLogDBContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABHAAAA",
+              "DocumentIndex": 10,
+              "Title": "ExceptionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Utilities\\ExceptionHandler.cs",
+              "RelativeDocumentMoniker": "Utilities\\ExceptionHandler.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Utilities\\ExceptionHandler.cs",
+              "RelativeToolTip": "Utilities\\ExceptionHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T11:07:12.063Z"
+              "WhenOpened": "2024-09-11T11:05:09.63Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "GenerateHashPassword.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Utilities\\GenerateHashPassword.cs",
-              "RelativeDocumentMoniker": "Utilities\\GenerateHashPassword.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Utilities\\GenerateHashPassword.cs",
-              "RelativeToolTip": "Utilities\\GenerateHashPassword.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAwAAAA",
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAQwAoAAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T16:32:27.236Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PagedResult.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Models\\PagedResult.cs",
-              "RelativeDocumentMoniker": "Models\\PagedResult.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Models\\PagedResult.cs",
-              "RelativeToolTip": "Models\\PagedResult.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T20:34:52.2Z"
+              "WhenOpened": "2024-09-08T16:54:30.086Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\UserManagmentSystem\\Services\\AuthService.cs",
-              "RelativeToolTip": "Services\\AuthService.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACAAAAA7AAAA",
+              "Title": "ErrorLogDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Data\\ErrorLogDBContext.cs",
+              "RelativeDocumentMoniker": "Data\\ErrorLogDBContext.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Data\\ErrorLogDBContext.cs",
+              "RelativeToolTip": "Data\\ErrorLogDBContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T16:24:11.152Z"
+              "WhenOpened": "2024-09-11T11:07:12.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GenerateHashPassword.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Utilities\\GenerateHashPassword.cs",
+              "RelativeDocumentMoniker": "Utilities\\GenerateHashPassword.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Utilities\\GenerateHashPassword.cs",
+              "RelativeToolTip": "Utilities\\GenerateHashPassword.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T16:32:27.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PagedResult.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Models\\PagedResult.cs",
+              "RelativeDocumentMoniker": "Models\\PagedResult.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Jaipal\\Repos\\SDD\\SDD\\Backend\\UserManagmentSystem\\Models\\PagedResult.cs",
+              "RelativeToolTip": "Models\\PagedResult.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T20:34:52.2Z",
+              "EditorCaption": ""
             }
           ]
         }

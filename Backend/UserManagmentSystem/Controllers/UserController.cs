@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 using UserManagmentSystem.Data;
 using UserManagmentSystem.Models;
 using UserManagmentSystem.Services;
@@ -9,19 +11,18 @@ namespace UserManagmentSystem.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+ //   [Authorize(Roles = "Admin, User")]
     public class UsersController : ControllerBase
     {
-        private readonly AppDbContext _context;
         private readonly IUserService _userService;
 
-        public UsersController(AppDbContext context, IUserService userService)
+        public UsersController(IUserService userService)
         {
-            _context = context;
             _userService = userService;
-
         }
 
         [HttpPost]
+        [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> CreateUser([FromBody] AddUser request)
         {
             var isUserExist = await _userService.GetUserByNameAsync(request.Username);
@@ -43,6 +44,8 @@ namespace UserManagmentSystem.Controllers
         }
 
         [HttpGet("{id}")]
+        // [Authorize(Policy = "UserPolicy")]
+        [Authorize(Roles = "Admin, User")]
         public async Task<ActionResult> GetUser(int id)
         {
             var user = await _userService.GetUserByIdAsync(id);
@@ -55,12 +58,13 @@ namespace UserManagmentSystem.Controllers
 
         [HttpGet]
         [Route("AllUsers")]
+        [Authorize(Roles = "Admin, User")]
         public async Task<ActionResult<PagedResult<User>>> GetAll(
-        [FromQuery] string searchTerm,
-        [FromQuery] string sortBy = "UpdatedDate",
-        [FromQuery] string sortOrder = "desc",
-        [FromQuery] int page = 1,
-        [FromQuery] int pageSize = 10)
+                                        [FromQuery] string searchTerm,
+                                        [FromQuery] string sortBy = "UpdatedDate",
+                                        [FromQuery] string sortOrder = "desc",
+                                        [FromQuery] int page = 1,
+                                        [FromQuery] int pageSize = 10)
         {
             var users = await _userService.GetAllUsersAsync();
 
@@ -69,8 +73,12 @@ namespace UserManagmentSystem.Controllers
             // Apply search
             if (!string.IsNullOrWhiteSpace(searchTerm) && searchTerm.Length > 2)
             {
-                query = query.Where(i => i.FirstName.ToLower().Contains(searchTerm) || i.LastName.Contains(searchTerm)
-                    || i.Username.Contains(searchTerm) || i.Email.Contains(searchTerm));
+                query = query.Where(i =>
+                                (i.FirstName != null && i.FirstName.ToLower().Contains(searchTerm)) ||
+                                (i.LastName != null && i.LastName.ToLower().Contains(searchTerm)) ||
+                                (i.Username != null && i.Username.ToLower().Contains(searchTerm)) ||
+                                (i.Email != null && i.Email.ToLower().Contains(searchTerm))
+    );
             }
 
             // Apply sorting
@@ -113,13 +121,14 @@ namespace UserManagmentSystem.Controllers
 
         [HttpPut]
         [Route("UpdateUser")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<AddUser>> UpdateUser(int Id, AddUser user)
         {
             if (Id != user.Id)
             {
                 return BadRequest(new
                 {
-                    message = "Some thing went wrong, Please check the user details again",
+                    message = "Some thing went wrong, Please check the user details",
                     success = false
                 });
             }
@@ -128,7 +137,7 @@ namespace UserManagmentSystem.Controllers
             {
                 return BadRequest(new
                 {
-                    message = "Some thing went wrong, Please check the user details again",
+                    message = "Some thing went wrong, Please check the user details",
                     success = false
                 });
             }
@@ -144,13 +153,14 @@ namespace UserManagmentSystem.Controllers
 
         [HttpDelete]
         [Route("DeleteUser")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteUser(int Id)
         {
-            if (Id == null)
+            if (Id == null || Id == 0)
             {
                 return BadRequest(new
                 {
-                    message = "Some thing went wrong",
+                    message = "User not found",
                     success = false
                 });
             }
@@ -161,5 +171,7 @@ namespace UserManagmentSystem.Controllers
                 status = true
             });
         }
+
+
     }
 }
